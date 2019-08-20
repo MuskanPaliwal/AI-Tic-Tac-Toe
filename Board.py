@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.4
+i#!/usr/bin/env python3.4
 class Board:
     """Represents one board to a Tic-Tac-Toe game."""
 
@@ -7,7 +7,7 @@ class Board:
         A board is a dictionary which the key is the position in the board
         and the value can be 'X', 'O' or ' ' (representing an empty position
         in the board.)"""
-        self.board =[' ',' ',' ',' ',' ',' ',' ',' ',' ',' ']
+        self.board =['1','2',' ',' ',' ',' ',' ',' ',' ',' ']
     def print_board(self):
         """Prints the board."""
         print(" %c | %c | %c " % (self.board[1],self.board[2],self.board[3]))
@@ -30,3 +30,13 @@ class Board:
             self.board[position] = type
             return self.board
         return None
+
+    def getavailable_position(self):
+        """
+        Returns available positions
+        """
+        available = []
+        for position, obj in enumerate(self.board):
+            if obj == None:
+                available.append(position)
+        return available
