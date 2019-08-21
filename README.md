@@ -1,5 +1,5 @@
 # AI_Tic-Tac-Toe
-Contains step by step creation of an Artificial Bot who plays Tic-Tac-Toe intelligently. Try it: [Tic-tac-toe - Minimax]https://cledersonbc.github.io/tic-tac-toe-minimax/)
+Contains step by step creation of an Artificial Bot who plays Tic-Tac-Toe intelligently. Try it: [Tic-tac-toe - Minimax] https://cledersonbc.github.io/tic-tac-toe-minimax/)
 
 # Tic-Tac-Toe-minimax
 An implementation of Minimax AI Algorithm on Tic-Tac-Toe (or Noughts and Crosses) game.
