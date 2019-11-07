@@ -89,7 +89,7 @@ class GAME:
 
 if __name__ == '__main__':
     game=GAME()
-    '''player1 =Player.AI("X")'''
-    player1 =Player.Human("O")
-    player2 =Player.Dummy("X") 
+    player1 =Player.AI("X")
+    player2 =Player.Human("O")
+    '''player2 =Player.Dummy("X")''' 
     game.play( player1, player2)
