@@ -73,9 +73,9 @@ class GAME:
                 self.p1.move(self)
             else:
                 if self.p2.type =='H':
-                    print("\t\t[Player1's Move]")
-                else:
                     print("\t\t[Player2's Move]")
+                else:
+                    print("\t\t[Player1's Move]")
 
                 self.p2.move(self)
 
@@ -91,5 +91,5 @@ if __name__ == '__main__':
     game=GAME()
     player1 =Player.AI("X")
     player2 =Player.Human("O")
-    '''player2 =Player.Dummy("X")''' 
+    '''player2 =Player.Dummy("O")''' 
     game.play( player1, player2)
