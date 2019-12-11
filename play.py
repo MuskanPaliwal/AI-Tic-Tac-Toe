@@ -27,19 +27,22 @@ class GameLearning(object):
     def __init__(self, args, alpha=0.5, gamma=0.9, epsilon=0.1):
         self.games_played = 0
 
+        self.qlearner_agent_path = './trained_agents/qlearner_agent.pkl'
+        self.sarsa_agent_path = './trained_agents/sarsa_agent.pkl'
+
         if args.load:
             # load agent
             if args.agent_type == 'q':
                 # QLearner
                 try:
-                    f = open('./qlearner_agent.pkl','rb')
+                    f = open(self.qlearner_agent_path,'rb')
                 except IOError:
                     print("The agent file does not exist. Quitting.")
                     sys.exit(0)
             else:
                 # SarsaLearner
                 try:
-                    f = open('./sarsa_agent.pkl','rb')
+                    f = open(sarsa_agent_path,'rb')
                 except IOError:
                     print("The agent file does not exist. Quitting.")
                     sys.exit(0)
@@ -51,8 +54,8 @@ class GameLearning(object):
                 sys.exit(0)
         else:
             # check if agent state file already exists, and ask user whether to overwrite if so
-            if ((args.agent_type == "q" and os.path.isfile('./qlearner_agent.pkl')) or
-                    (args.agent_type == "s" and os.path.isfile('./qlearner_agent.pkl'))):
+            if ((args.agent_type == "q" and os.path.isfile(self.qlearner_agent_path)) or
+                    (args.agent_type == "s" and os.path.isfile(self.sarsa_agent_path))):
                 while True:
                     response = input("An agent state is already saved for this type. "
                                          "Are you sure you want to overwrite? [y/n]: ")
@@ -104,6 +107,11 @@ class GameLearning(object):
                 print("Games played: %i" % self.games_played)
 
         plot_agent_reward(self.agent.rewards)
+        
+        if args.agent_type == "q":
+            self.agent.save_agent(self.qlearner_agent_path)
+        elif args.agent_type == "s":
+            self.agent.save_agent(self.sarsa_agent_path)
 
 
 if __name__ == "__main__":

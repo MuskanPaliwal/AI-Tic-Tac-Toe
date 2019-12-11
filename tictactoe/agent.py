@@ -76,9 +76,8 @@ class Learner(ABC):
         """ Pickle the agent object instance to save the agent's state. """
         if os.path.isfile(path):
             os.remove(path)
-        f = open(path, 'wb')
-        pickle.dump(self, f)
-        f.close()
+        with open(path, 'wb') as f:
+            pickle.dump(self, f)
 
     @abstractmethod
     def update(self, s, s_, a, a_, r):
