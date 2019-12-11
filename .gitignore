@@ -1,3 +1,6 @@
+# Saved trained agents
+trained_agents/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
