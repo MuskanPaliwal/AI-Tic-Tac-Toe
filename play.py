@@ -42,7 +42,7 @@ class GameLearning(object):
             else:
                 # SarsaLearner
                 try:
-                    f = open(sarsa_agent_path,'rb')
+                    f = open(self.sarsa_agent_path,'rb')
                 except IOError:
                     print("The agent file does not exist. Quitting.")
                     sys.exit(0)
