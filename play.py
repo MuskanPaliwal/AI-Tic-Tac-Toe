@@ -109,7 +109,7 @@ class GameLearning(object):
         plot_agent_reward(self.agent.rewards)
         
         if args.agent_type == "q":
-            self.agent.save_agent(self.qlearner_agent_path)
+            self.agent.save_agent(qlearner_agent_path)
         elif args.agent_type == "s":
             self.agent.save_agent(self.sarsa_agent_path)
 
