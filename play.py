@@ -35,7 +35,7 @@ class GameLearning(object):
             if args.agent_type == 'q':
                 # QLearner
                 try:
-                    f = open(qlearner_agent_path,'rb')
+                    f = open(self.qlearner_agent_path,'rb')
                 except IOError:
                     print("The agent file does not exist. Quitting.")
                     sys.exit(0)
