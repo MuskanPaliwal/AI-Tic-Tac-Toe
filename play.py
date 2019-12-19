@@ -35,7 +35,7 @@ class GameLearning(object):
             if args.agent_type == 'q':
                 # QLearner
                 try:
-                    f = open(self.qlearner_agent_path,'rb')
+                    f = open(qlearner_agent_path,'rb')
                 except IOError:
                     print("The agent file does not exist. Quitting.")
                     sys.exit(0)
@@ -109,7 +109,7 @@ class GameLearning(object):
         plot_agent_reward(self.agent.rewards)
         
         if args.agent_type == "q":
-            self.agent.save_agent(qlearner_agent_path)
+            self.agent.save_agent(self.qlearner_agent_path)
         elif args.agent_type == "s":
             self.agent.save_agent(self.sarsa_agent_path)
 
