@@ -1,5 +1,5 @@
 # AI_Tic-Tac-Toe
-Contains step by step creation of an Artificial Bot who plays Tic-Tac-Toe intelligently. Try it:[AI_Tic-Tac-Toe](https://muskanpaliwal.github.io/)
+Contains step by step creation of an Artificial Bot who plays Tic-Tac-Toe intelligently. Try it:[AI_Tic-Tac-Toe](https://muskanpaliwal.github.io/index.html)
 
 
 # Tic-Tac-Toe-minimax
