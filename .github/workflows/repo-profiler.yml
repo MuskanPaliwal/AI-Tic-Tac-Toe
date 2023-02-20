@@ -1,8 +1,8 @@
 on:
   repository_dispatch:
     types: do_something
-    # branches:
-    #   - mkp/trigger_github_action
+    branches:
+        - MuskanPaliwal-patch-1
 jobs:
   profile:
     runs-on: ubuntu-latest
@@ -11,6 +11,5 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-          ref: ${{ github.event.client_payload.ref }}
       - name: Repository Profiler
         uses: Alokit-Innovations/repo-profiler@v0
