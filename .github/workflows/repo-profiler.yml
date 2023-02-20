@@ -2,7 +2,7 @@ on:
   repository_dispatch:
     types: do_something
     branches:
-        - MuskanPaliwal-patch-1
+        - main
 jobs:
   profile:
     runs-on: ubuntu-latest
