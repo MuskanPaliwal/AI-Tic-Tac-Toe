@@ -1,6 +1,6 @@
 on:
   repository_dispatch:
-    types: action_trigger
+    types: repo_profile_execution
     branches:
         - master
         - main
