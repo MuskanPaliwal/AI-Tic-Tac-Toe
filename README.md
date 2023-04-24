@@ -70,7 +70,7 @@ else:
 	return [-1, -1, +infinity]
 ```
 
-Both players start with your worst score. If player is MAX, its score is -infinity. Else if player is MIN, its score is +infinity. **Note:** *infinity* is an alias for inf (from math module, in Python).
+Both players start with their worst score. If player is MAX, its score is -infinity. Else if player is MIN, its score is +infinity. **Note:** *infinity* is an alias for inf (from math module, in Python).
 
 The best move on the board is [-1, -1] (row and column) for all.
 
