@@ -54,7 +54,7 @@ Next, we'll see each part of this pseudocode with Python implementation. The Pyt
 
 > MIN = -1
 
-The MAX may be X or O and the MIN may be O or X, whatever. The board is 3x3.
+The MAX may be X or O and the MIN may be O or X, whatever it can be. The board is 3x3.
 
 ```python
 def minimax(state, depth, player):
