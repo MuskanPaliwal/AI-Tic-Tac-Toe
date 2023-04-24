@@ -43,7 +43,7 @@ minimax(state, depth, player)
 end
 ```
 
-Next, we'll see each part of this pseudocode with Python implementation. The Python implementation is available at this repository. First of all, consider it:
+Next, we'll see each part of this pseudocode with Python implementation. The Python implementation is available at this repository. First of all, consider this:
 > board = [
 >	[0, 0, 0],
 >	[0, 0, 0],
