@@ -165,7 +165,7 @@ Simplified game tree:
 	<img src="preview/simplified-g-tree.png"></img>
 </p>
 
-That tree has 11 nodes. The full game tree has 549.946 nodes! You can test it putting a static global variable in your program and incrementing it for each minimax function call per turn.
+That tree has 11 nodes. The full game tree has 549.946 nodes! You can test it by putting a static global variable in your program and incrementing it for each minimax function call per turn.
 ## Tic-Tac-Toe with Reinforcement Learning
 AI agent to play Tic-tac-toe using
 reinforcement learning. Both the SARSA and Q-learning RL
