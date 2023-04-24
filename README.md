@@ -119,7 +119,7 @@ else:
 		best = score
 ```
 
-For MAX player, a bigger score will be received. For a MIN player, a lower score will be received. And in the end, the best move is returned. Final algorithm:
+For MAX player, a bigger score will be received. For a MIN player, a lower score will be received. And in the end, the best move is returned. Final algorithm will be:
 
 ```python
 def minimax(state, depth, player):
