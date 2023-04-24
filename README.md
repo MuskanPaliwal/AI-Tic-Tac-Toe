@@ -184,7 +184,7 @@ There are 3 main source code files:
 3. teacher.py
 
 I have implemented two RL agents that learn to play the game of tic-tac-toe:
-one follows the SARSA algorithm, and the other follows Q-learning.
+One follows the SARSA algorithm, and the other follows Q-learning.
 These agents are trained by a teacher agent that knows the optimal strategy;
 however, the teacher only follows this strategy with a given probability
 p at each turn. The rest of the time this teacher chooses randomly
