@@ -80,7 +80,7 @@ if depth == 0 or game_over(state):
 	return score
 ```
 
-If the depth is equal zero, then the board hasn't new empty cells to play. Or, if a player wins, then the game ended for MAX or MIN. So the score for that state will be returned.
+If the depth is equal to zero, then the board hasn't new empty cells to play. Or, if a player wins, then the game ended for MAX or MIN. So the score for that state will be returned.
 
 * If MAX won: return +1
 * If MIN won: return -1
