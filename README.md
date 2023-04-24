@@ -8,7 +8,7 @@ An implementation of Minimax AI Algorithm on Tic-Tac-Toe (or Noughts and Crosses
 	<img src="preview/minimax_img.png"></img>
 </p>
 
-## What is Minimax?
+## What is Minimax
 Minimax is an artificial intelligence applied in two player games, such as tic-tac-toe, checkers, chess and go. These games are known as zero-sum games, because in a mathematical representation: one player wins (+1) and other player loses (-1) or none of them wins (0).
 
 ## How it works
