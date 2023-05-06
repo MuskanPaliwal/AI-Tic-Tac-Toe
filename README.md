@@ -1,5 +1,5 @@
 # AI_Tic-Tac-Toe
-Contains step by step creation of an Artificial Bot that plays Tic-Tac-Toe intelligently. Try it:[AI_Tic-Tac-Toe](https://muskanpaliwal.github.io/AI-Tic-Tac-Toe)
+Contains steps for the creation of an Artificial Bot which plays Tic-Tac-Toe intelligently. Try it:[AI_Tic-Tac-Toe](https://muskanpaliwal.github.io/AI-Tic-Tac-Toe)
 
 
 # Tic-Tac-Toe-minimax
@@ -8,11 +8,11 @@ An implementation of Minimax AI Algorithm on Tic-Tac-Toe (or Noughts and Crosses
 	<img src="preview/minimax_img.png"></img>
 </p>
 
-## What is Minimax?
-Minimax is a artificial intelligence applied in two player games, such as tic-tac-toe, checkers, chess and go. This games are known as zero-sum games, because in a mathematical representation: one player wins (+1) and other player loses (-1) or both of anyone not to win (0).
+## What is Minimax
+Minimax is an artificial intelligence applied in two player games, such as tic-tac-toe, checkers, chess and go. These games are known as zero-sum games, because in a mathematical representation: one player wins (+1) and other player loses (-1) or none of them wins (0).
 
-## How does it works?
-The algorithm search, recursively, the best move that leads the *Max* player to win or not lose (draw). It consider the current state of the game and the available moves at that state, then for each valid move it plays (alternating *min* and *max*) until it finds a terminal state (win, draw or lose).
+## How it works
+The algorithm recursively search the best move that leads the *Max* player to win or not lose (draw). It considers the current state of the game and the available moves at that state, then for each valid move it plays (alternating *min* and *max*) until it finds a terminal state (win, draw or lose).
 
 ## Understanding the Algorithm
 The algorithm was studied by the book Algorithms in a Nutshell (George Heineman; Gary Pollice; Stanley Selkow, 2009). Pseudocode (adapted):
@@ -43,7 +43,7 @@ minimax(state, depth, player)
 end
 ```
 
-Now we'll see each part of this pseudocode with Python implementation. The Python implementation is available at this repository. First of all, consider it:
+Next, we'll see each part of this pseudocode with Python implementation. The Python implementation is available at this repository. First of all, consider this:
 > board = [
 >	[0, 0, 0],
 >	[0, 0, 0],
@@ -54,7 +54,7 @@ Now we'll see each part of this pseudocode with Python implementation. The Pytho
 
 > MIN = -1
 
-The MAX may be X or O and the MIN may be O or X, whatever. The board is 3x3.
+The MAX may be X or O and the MIN may be O or X, whatever it can be. The board is 3x3.
 
 ```python
 def minimax(state, depth, player):
@@ -70,7 +70,7 @@ else:
 	return [-1, -1, +infinity]
 ```
 
-Both players start with your worst score. If player is MAX, its score is -infinity. Else if player is MIN, its score is +infinity. **Note:** *infinity* is an alias for inf (from math module, in Python).
+Both players start with their worst score. If player is MAX, its score is -infinity. Else if player is MIN, its score is +infinity. **Note:** *infinity* is an alias for inf (from math module, in Python).
 
 The best move on the board is [-1, -1] (row and column) for all.
 
@@ -80,7 +80,7 @@ if depth == 0 or game_over(state):
 	return score
 ```
 
-If the depth is equal zero, then the board hasn't new empty cells to play. Or, if a player wins, then the game ended for MAX or MIN. So the score for that state will be returned.
+If the depth is equal to zero, then the board hasn't new empty cells to play. Or, if a player wins, then the game ended for MAX or MIN. So the score for that state will be returned.
 
 * If MAX won: return +1
 * If MIN won: return -1
@@ -119,7 +119,7 @@ else:
 		best = score
 ```
 
-For MAX player, a bigger score will be received. For a MIN player, a lower score will be received. And in the end, the best move is returned. Final algorithm:
+For MAX player, a bigger score will be received. For a MIN player, a lower score will be received. And in the end, the best move is returned. Final algorithm will be:
 
 ```python
 def minimax(state, depth, player):
@@ -165,7 +165,7 @@ Simplified game tree:
 	<img src="preview/simplified-g-tree.png"></img>
 </p>
 
-That tree has 11 nodes. The full game tree has 549.946 nodes! You can test it putting a static global variable in your program and incrementing it for each minimax function call per turn.
+That tree has 11 nodes. The full game tree has 549.946 nodes! You can test it by putting a static global variable in your program and incrementing it for each minimax function call per turn.
 ## Tic-Tac-Toe with Reinforcement Learning
 AI agent to play Tic-tac-toe using
 reinforcement learning. Both the SARSA and Q-learning RL
@@ -184,7 +184,7 @@ There are 3 main source code files:
 3. teacher.py
 
 I have implemented two RL agents that learn to play the game of tic-tac-toe:
-one follows the SARSA algorithm, and the other follows Q-learning.
+One follows the SARSA algorithm, and the other follows Q-learning.
 These agents are trained by a teacher agent that knows the optimal strategy;
 however, the teacher only follows this strategy with a given probability
 p at each turn. The rest of the time this teacher chooses randomly
